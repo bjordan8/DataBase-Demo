@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="214dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:onClick="onClick"
+            android:text="@string/show_label"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="onClick"
+            android:text="@string/delete_label"
+            tools:ignore="ButtonStyle"
+            android:layout_alignBaseline="@+id/Center"
+            android:layout_alignBottom="@+id/Center"
+            android:layout_toRightOf="@+id/Tower"
+            android:layout_toEndOf="@+id/Tower" />
+
+        <Button
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/input"
+            tools:ignore="ButtonStyle"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/delete"
+            android:layout_alignEnd="@+id/delete"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp" />
+
+        <Button
+            android:id="@+id/dean"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:onClick="onClick"
+            android:text="@string/dean"
+            tools:ignore="ButtonStyle"
+            android:layout_alignBottom="@+id/Cluster"
+            android:layout_toRightOf="@+id/Tower"
+            android:layout_toEndOf="@+id/Tower"
+            android:layout_alignTop="@+id/Cluster" />
+
+        <Button
+            android:id="@+id/Tower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/show"
+            android:layout_alignRight="@+id/show"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:onClick="onClick"
+            android:text="@string/tower"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/Cluster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/cluster"
+            tools:ignore="ButtonStyle"
+            android:layout_alignBaseline="@+id/Tower"
+            android:layout_alignBottom="@+id/Tower"
+            android:layout_toRightOf="@+id/dean"
+            android:layout_toEndOf="@+id/dean"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+
+        <Button
+            android:id="@+id/Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Tower"
+            android:layout_alignStart="@+id/Tower"
+            android:layout_below="@+id/Tower"
+            android:layout_marginTop="15dp"
+            android:onClick="onClick"
+            android:text="@string/center"
+            tools:ignore="ButtonStyle" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/title"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:text="@string/list_label" />
+
+</LinearLayout>
